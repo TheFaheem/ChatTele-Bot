@@ -19,7 +19,7 @@ def greet(message):
 def response(message):
     image = openai.Image.create(
     prompt= message.text,
-    n=3,
+    n=1,
     size ='1024x1024') 
     img_url = (image)['data'][0]['url']
     bot.send_photo(message.chat.id, img_url)
