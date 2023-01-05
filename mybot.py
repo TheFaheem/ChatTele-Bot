@@ -24,5 +24,5 @@ def response(message):
     img_url = (image)['data'][0]['url']
     bot.send_photo(message.chat.id, img_url)
     
-bot.polling()
+bot.polling(none_stop=True)
 
