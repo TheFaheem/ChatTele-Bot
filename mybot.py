@@ -11,7 +11,7 @@ print('Bot Started')
     
 @bot.message_handler(commands = ['greet','start'])
 def greet(message):
-    msg = ''' Ask Me Something\nI Will Convert Them into Image '''
+    msg = '''Tell Me Something\nI Will Convert Your Thoughts into an Image '''
     bot.send_message(message.chat.id, msg)
     
     
