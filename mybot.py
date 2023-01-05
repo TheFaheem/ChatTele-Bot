@@ -24,5 +24,5 @@ def response(message):
     img_url = (image)['data'][0]['url']
     bot.send_photo(message.chat.id, img_url)
     
-bot.infinty_pooling(none_stop=True)
+bot.infinity_pooling(none_stop=True)
 
