@@ -11,7 +11,8 @@ print('Bot Started...')
 
 @bot.message_handler(commands= ['answer_me'])
 def chatbot(message):
-    msg = f"Hi! @{message.chat.username}\nEnter The Question You Want To Ask."
+    name = f"{message.from_user.first_name} {message.from_user.last_name}"
+    msg = f"Hi {name}!\nEnter The Question You Want To Ask."
     bot.send_message(message.chat.id, msg)
     @bot.message_handler(content_types='text')
     def gpt(message):
