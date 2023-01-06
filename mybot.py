@@ -15,7 +15,7 @@ def chatbot(message):
     msg = f"Hi {name}!\nEnter The Question You Want To Ask."
     bot.send_message(message.chat.id, msg)
     @bot.message_handler(content_types='text')
-        def gpt(message):
+    def gpt(message):
             text = openai.Completion.create(
             model="text-davinci-003",
             prompt= message.text,
