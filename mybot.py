@@ -23,7 +23,7 @@ def chatbot(message):
         top_p=0.5,
         frequency_penalty=0,
         presence_penalty=0.0)
-        response= (text)["choices"][0]['text']
+        response= (text)["choices"][0]['text'][2:]
         bot.send_message(message.chat.id, response)
         
 bot.polling(none_stop=True)
