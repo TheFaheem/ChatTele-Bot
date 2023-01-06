@@ -18,9 +18,9 @@ def chatbot(message):
         text = openai.Completion.create(
         model="text-davinci-003",
         prompt= message.text,
-        temperature=0.5,
-        max_tokens= 1500,
-        top_p=0.5,
+        temperature=0.7,
+        max_tokens= 256,
+        top_p=1,
         frequency_penalty=0,
         presence_penalty=0.0)
         response= (text)["choices"][0]['text'][2:]
